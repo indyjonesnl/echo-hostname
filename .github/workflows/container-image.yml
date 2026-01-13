@@ -42,3 +42,4 @@ jobs:
         cache-to: type=gha,mode=max
         file: ./Dockerfile
         tags: ghcr.io/${{ github.repository }}:${{ github.run_number }}
+        target: prod
