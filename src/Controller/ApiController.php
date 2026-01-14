@@ -22,4 +22,10 @@ final class ApiController extends AbstractController
     {
         return $this->json(['hostname' => gethostname()]);
     }
+
+    #[Route('/api/node_name', methods: [Request::METHOD_GET])]
+    public function nodeName(): Response
+    {
+        return $this->json(['node_name' => getenv('NODE_NAME')]);
+    }
 }
